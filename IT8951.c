@@ -799,7 +799,7 @@ void IT8951_BMP_Example(uint32_t x, uint32_t y,char *path)
 	stLdImgInfo.ulStartFBAddr    = (uint32_t)gpFrameBuf;
 	stLdImgInfo.usEndianType     = IT8951_LDIMG_L_ENDIAN;
 	stLdImgInfo.usPixelFormat    = IT8951_8BPP; 
-	stLdImgInfo.usRotate         = IT8951_ROTATE_0;
+	stLdImgInfo.usRotate         = IT8951_ROTATE_90;
 	stLdImgInfo.ulImgBufBaseAddr = gulImgBufAddr;
 	//Set Load Area
 	stAreaImgInfo.usX      = 0;
