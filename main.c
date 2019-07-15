@@ -47,14 +47,18 @@ int main (int argc, char *argv[])
 	IT8951_RIPPLE_Info(500,550,"Current",scale);
 
 	uint16_t j;
-	char* buffer [8];
+	char buffer [8];
 	for(j=0; j<800; j++)
 	{
-		IT8951_RIPPLE_Info(600,500,sprintf(buffer, "%d", j*2),scale);
-		IT8951_RIPPLE_Info(600,550,sprintf(buffer, "%d", j),scale);
+		sprintf(buffer, "%d", j*2)
+		IT8951_RIPPLE_Info(600,500,buffer
+		sprintf(buffer, "%d", j),scale);
+		IT8951_RIPPLE_Info(600,550,buffer,scale);
 
-		IT8951_RIPPLE_Info(600,300,sprintf(buffer, "%d", j*4),scale);
-		IT8951_RIPPLE_Info(600,350,sprintf(buffer, "%d", j*3),scale);
+		sprintf(buffer, "%d", j*4)
+		IT8951_RIPPLE_Info(600,300,buffer
+		sprintf(buffer, "%d", j*3),scale);
+		IT8951_RIPPLE_Info(600,350,buffer,scale);
 	}
 
 	IT8951_Cancel();
