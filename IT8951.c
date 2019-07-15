@@ -775,13 +775,13 @@ void IT8951_RIPPLE_Info(uint32_t x, uint32_t y,char *string)
 	//Set Load Area
 	stAreaImgInfo.usX      = x;
 	stAreaImgInfo.usY      = y;
-	stAreaImgInfo.usWidth  = gstI80DevInfo.usPanelW;
+	stAreaImgInfo.usWidth  = 200;
 	stAreaImgInfo.usHeight = gstI80DevInfo.usPanelH;
 	
 	//Load Image from Host to IT8951 Image Buffer
 	IT8951HostAreaPackedPixelWrite(&stLdImgInfo, &stAreaImgInfo);//Display function 2
 	
-	IT8951DisplayArea(0,0, gstI80DevInfo.usPanelW, gstI80DevInfo.usPanelH, 2);
+	IT8951DisplayArea(0,0, 200, gstI80DevInfo.usPanelH, 2);
 }
 
 void IT8951_BMP_Example(uint32_t x, uint32_t y,char *path)

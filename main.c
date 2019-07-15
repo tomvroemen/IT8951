@@ -34,9 +34,9 @@ int main (int argc, char *argv[])
 	IT8951_BMP_Example(x,y,argv[3]);
 
 	IT8951_RIPPLE_Info(10,10,"Ripple Test");
-	IT8951_RIPPLE_Info(10,60,"Hoi Koen");
-	IT8951_RIPPLE_Info(10,120,"en");
-	IT8951_RIPPLE_Info(10,180,"Rogier!");
+	IT8951_RIPPLE_Info(10,30,"Hoi Koen");
+	IT8951_RIPPLE_Info(10,50,"en");
+	IT8951_RIPPLE_Info(10,70,"Rogier!");
 
 	IT8951_Cancel();
 
