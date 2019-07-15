@@ -35,10 +35,10 @@ int main (int argc, char *argv[])
 
 	uint8_t scale = 2;
 
-	IT8951_RIPPLE_Info_L(300,20,"All systems OK",scale);
+	IT8951_RIPPLE_Info_L(300,20,"Systems OK",scale);
 	IT8951_RIPPLE_Info_L(300,60,"V Control",scale);
 	IT8951_RIPPLE_Info_L(300,100,"Active cells",scale);
-	IT8951_RIPPLE_Info_L(300,240,"Balance state",scale);
+	IT8951_RIPPLE_Info_L(300,240,"Balance",scale);
 
 	IT8951_RIPPLE_Info_R(500,300,"Speed",scale);
 	IT8951_RIPPLE_Info_R(500,350,"Temp.",scale);
@@ -50,6 +50,14 @@ int main (int argc, char *argv[])
 	char buffer [8];
 	for(j=0; j<800; j++)
 	{
+		sprintf(buffer, "%d", j/2);
+		IT8951_RIPPLE_Info_R(100,60,buffer,scale);
+
+		sprintf(buffer, "%d", j*5);
+		IT8951_RIPPLE_Info_R(100,100,buffer,scale);
+		sprintf(buffer, "%d", j*6);
+		IT8951_RIPPLE_Info_R(100,240,buffer,scale);
+
 		sprintf(buffer, "%d", j*2);
 		IT8951_RIPPLE_Info_R(650,500,buffer,scale);
 		sprintf(buffer, "%d", j);
