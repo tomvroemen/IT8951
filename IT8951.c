@@ -774,22 +774,13 @@ void IT8951_RIPPLE_Info(uint32_t x, uint32_t y,char *string, uint8_t scale)
 	//Set Load Area
 	stAreaImgInfo.usX      = x;
 	stAreaImgInfo.usY      = y;
-
-	stAreaImgInfo.usWidth  = gstI80DevInfo.usPanelH;
-	stAreaImgInfo.usHeight = gstI80DevInfo.usPanelW;
-	
-	//Load Image from Host to IT8951 Image Buffer
-	IT8951HostAreaPackedPixelWrite(&stLdImgInfo, &stAreaImgInfo);//Display function 2
-	
-	IT8951DisplayArea(0,0, gstI80DevInfo.usPanelH, gstI80DevInfo.usPanelW, 2);
-
-	/*stAreaImgInfo.usWidth  = gstI80DevInfo.usPanelW;
+	stAreaImgInfo.usWidth  = gstI80DevInfo.usPanelW;
 	stAreaImgInfo.usHeight = 16*scale;
 	
 	//Load Image from Host to IT8951 Image Buffer
 	IT8951HostAreaPackedPixelWrite(&stLdImgInfo, &stAreaImgInfo);//Display function 2
 	
-	IT8951DisplayArea(x,y, 8*scale*strlen(string), 16*scale, 1);*/
+	IT8951DisplayArea(x,y, 8*scale*strlen(string), 16*scale, 1);
 }
 
 void IT8951_BMP_Example(uint32_t x, uint32_t y,char *path)
@@ -813,18 +804,18 @@ void IT8951_BMP_Example(uint32_t x, uint32_t y,char *path)
 	//Set Load Area
 	stAreaImgInfo.usX      = 0;
 	stAreaImgInfo.usY      = 0;
-	stAreaImgInfo.usWidth  = gstI80DevInfo.usPanelH;
-	stAreaImgInfo.usHeight = gstI80DevInfo.usPanelW;
+	stAreaImgInfo.usWidth  = gstI80DevInfo.usPanelW;
+	stAreaImgInfo.usHeight = gstI80DevInfo.usPanelH;
 
-	EPD_DrawLine(300, 200, 400, 316, 0x00);
-	EPD_DrawLine(325, 300, 400, 366, 0x00);
-	EPD_DrawLine(300, 450, 400, 516, 0x00);
-	EPD_DrawLine(225, 600, 400, 566, 0x00);
+	EPD_DrawLine(350, 150, 500, 316, 0x00);
+	EPD_DrawLine(350, 300, 500, 366, 0x00);
+	EPD_DrawLine(450, 450, 500, 516, 0x00);
+	EPD_DrawLine(300, 550, 500, 566, 0x00);
 	
 	//Load Image from Host to IT8951 Image Buffer
 	IT8951HostAreaPackedPixelWrite(&stLdImgInfo, &stAreaImgInfo);//Display function 2
 	//Display Area ?V (x,y,w,h) with mode 2 for fast gray clear mode - depends on current waveform 
-	IT8951DisplayArea(0,0, gstI80DevInfo.usPanelH, gstI80DevInfo.usPanelW, 2);
+	IT8951DisplayArea(0,0, gstI80DevInfo.usPanelW, gstI80DevInfo.usPanelH, 2);
 }
 
 //-----------------------------------------------------------
