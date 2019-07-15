@@ -35,16 +35,16 @@ int main (int argc, char *argv[])
 
 	uint8_t scale = 2;
 
-	IT8951_RIPPLE_Info(10,10*scale,"Ripple Test",scale);
-	IT8951_RIPPLE_Info(10,30*scale,"Hoi Koen",scale);
-	IT8951_RIPPLE_Info(10,50*scale,"en",scale);
-	IT8951_RIPPLE_Info(10,70*scale,"Rogier!",scale);
+	IT8951_RIPPLE_Info(10,10,"Ripple Test",scale);
+	IT8951_RIPPLE_Info(10,60,"Hoi Koen",scale);
+	IT8951_RIPPLE_Info(10,100,"en",scale);
+	IT8951_RIPPLE_Info(10,140,"Rogier!",scale);
 
-	IT8951_RIPPLE_Info(10,500*scale,"Motor",scale);
-	IT8951_RIPPLE_Info(10,550*scale,"Battery",scale);
+	IT8951_RIPPLE_Info(10,500,"Motor",scale);
+	IT8951_RIPPLE_Info(10,550,"Battery",scale);
 
-	IT8951_RIPPLE_Info(600,500*scale,"Voltage",scale);
-	IT8951_RIPPLE_Info(600,550*scale,"Current",scale);
+	IT8951_RIPPLE_Info(600,500,"Voltage",scale);
+	IT8951_RIPPLE_Info(600,550,"Current",scale);
 
 	IT8951_Cancel();
 
