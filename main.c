@@ -40,25 +40,25 @@ int main (int argc, char *argv[])
 	IT8951_RIPPLE_Info_L(10,100,"en",scale);
 	IT8951_RIPPLE_Info_L(10,140,"Rogier!",scale);
 
-	IT8951_RIPPLE_Info(500,300,"Speed",scale);
-	IT8951_RIPPLE_Info(500,350,"Temp.",scale);
+	IT8951_RIPPLE_Info_R(500,300,"Speed",scale);
+	IT8951_RIPPLE_Info_R(500,350,"Temp.",scale);
 
-	IT8951_RIPPLE_Info(500,500,"Voltage",scale);
-	IT8951_RIPPLE_Info(500,550,"Current",scale);
+	IT8951_RIPPLE_Info_R(500,500,"Voltage",scale);
+	IT8951_RIPPLE_Info_R(500,550,"Current",scale);
 
 	uint16_t j;
 	char buffer [8];
 	for(j=0; j<800; j++)
 	{
 		sprintf(buffer, "%d", j*2);
-		IT8951_RIPPLE_Info(650,500,buffer,scale);
+		IT8951_RIPPLE_Info_R(650,500,buffer,scale);
 		sprintf(buffer, "%d", j);
-		IT8951_RIPPLE_Info(650,550,buffer,scale);
+		IT8951_RIPPLE_Info_R(650,550,buffer,scale);
 
 		sprintf(buffer, "%d", j*4);
-		IT8951_RIPPLE_Info(650,300,buffer,scale);
+		IT8951_RIPPLE_Info_R(650,300,buffer,scale);
 		sprintf(buffer, "%d", j*3);
-		IT8951_RIPPLE_Info(650,350,buffer,scale);
+		IT8951_RIPPLE_Info_R(650,350,buffer,scale);
 	}
 
 	IT8951_Cancel();
