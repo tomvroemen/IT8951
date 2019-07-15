@@ -234,7 +234,7 @@ void EPD_FillCircle(uint16_t Xpos,uint16_t Ypos,uint16_t Radius,uint8_t color)
  	EPD_DrawCircle(Xpos, Ypos, Radius,color);
 }
 
-void EPD_PutChar(uint16_t Xpos,uint16_t Ypos,uint8_t ASCI,uint8_t charColor,uint8_t bkColor )
+void EPD_PutChar(uint16_t Xpos,uint16_t Ypos,uint8_t ASCI,uint8_t charColor,uint8_t bkColor,uint8_t scale )
 {
 	uint16_t i, j;
 	uint8_t buffer[16], tmp_char;
@@ -246,32 +246,32 @@ void EPD_PutChar(uint16_t Xpos,uint16_t Ypos,uint8_t ASCI,uint8_t charColor,uint
 		{
 			if(((tmp_char >> (7-j)) & 0x01) == 0x01)
 			{
-				EPD_DrawPixel(Xpos+j, Ypos+i, charColor);
+				EPD_DrawPixel(Xpos+j*scale, Ypos+i*scale, charColor);
 			}
 			else
 			{
-				EPD_DrawPixel(Xpos+j, Ypos+i, bkColor);
+				EPD_DrawPixel(Xpos+j*scale, Ypos+i*scale, bkColor);
 			}
 		}
 	}
 }
 
 
-void EPD_Text(uint16_t Xpos,uint16_t Ypos,uint8_t *str,uint8_t Color,uint8_t bkColor)
+void EPD_Text(uint16_t Xpos,uint16_t Ypos,uint8_t *str,uint8_t Color,uint8_t bkColor, uint8_t scale)
 {
 	uint8_t TempChar;
 	do
 	{
 		TempChar = *str++;  
-		EPD_PutChar(Xpos, Ypos, TempChar, Color, bkColor);    
-		if(Xpos < gstI80DevInfo.usPanelW - 8)
+		EPD_PutChar(Xpos, Ypos, TempChar, Color, bkColor, scale);    
+		if(Xpos < gstI80DevInfo.usPanelW - 8*scale)
 		{
-			Xpos += 8;
+			Xpos += 8*scale;
 		} 
-		else if (Ypos < gstI80DevInfo.usPanelH - 16)
+		else if (Ypos < gstI80DevInfo.usPanelH - 16*scale)
 		{
 			Xpos = 0;
-			Ypos += 16;
+			Ypos += 16*scale;
 		}   
 	else
 	{

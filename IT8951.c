@@ -733,7 +733,7 @@ void IT8951_GUI_Example()
 	
 	EPD_FillCircle(width*10/12, high*8/10, width/10, 0x00);
 	
-	EPD_Text(0,  0, (uint8_t*)"hello world",0x00, 0xff);
+	EPD_Text(0,  0, (uint8_t*)"hello world",0x00, 0xff, 2);
  
 	//EPD_DrawMatrix(0,0,550,412,bmp01);
 	
@@ -757,12 +757,13 @@ void IT8951_GUI_Example()
 	IT8951DisplayArea(0,0, gstI80DevInfo.usPanelW, gstI80DevInfo.usPanelH, 2);
 }
 
-void IT8951_RIPPLE_Info(uint32_t x, uint32_t y,char *string)
+void IT8951_RIPPLE_Info(uint32_t x, uint32_t y,char *string, uint8_t scale)
 {
 	IT8951LdImgInfo stLdImgInfo;
 	IT8951AreaImgInfo stAreaImgInfo;
-	EPD_Text(0,  0, (uint8_t*)"                      ",0x00, 0xff);
-	EPD_Text(0,  0, (uint8_t*)string,0x00, 0xff);
+	char ln = string.length()
+	EPD_Text(0,  0, (uint8_t*)"                                        ".resize(ln);,0x00, 0xff, scale);
+	EPD_Text(0,  0, (uint8_t*)string,0x00, 0xff, scale);
 
 	IT8951WaitForDisplayReady();
 	
