@@ -790,7 +790,7 @@ void IT8951_RIPPLE_Nmbr(uint32_t x, uint32_t y,char *string, uint8_t scale)
 	IT8951LdImgInfo stLdImgInfo;
 	IT8951AreaImgInfo stAreaImgInfo;
 	char* texstr = "                 ";
-	strncpy(texstr, string, string.length);
+	strncpy(texstr, string, string.length());
 	EPD_Text(0,  0, (uint8_t*)texstr,0x00, 0xff, scale);
 
 	IT8951WaitForDisplayReady();
