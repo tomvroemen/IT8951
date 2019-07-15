@@ -774,13 +774,22 @@ void IT8951_RIPPLE_Info(uint32_t x, uint32_t y,char *string, uint8_t scale)
 	//Set Load Area
 	stAreaImgInfo.usX      = x;
 	stAreaImgInfo.usY      = y;
+
 	stAreaImgInfo.usWidth  = gstI80DevInfo.usPanelW;
+	stAreaImgInfo.usHeight = gstI80DevInfo.usPanelH;
+	
+	//Load Image from Host to IT8951 Image Buffer
+	IT8951HostAreaPackedPixelWrite(&stLdImgInfo, &stAreaImgInfo);//Display function 2
+	
+	IT8951DisplayArea(0,0, gstI80DevInfo.usPanelW, gstI80DevInfo.usPanelH, 1);
+
+	/*stAreaImgInfo.usWidth  = gstI80DevInfo.usPanelW;
 	stAreaImgInfo.usHeight = 16*scale;
 	
 	//Load Image from Host to IT8951 Image Buffer
 	IT8951HostAreaPackedPixelWrite(&stLdImgInfo, &stAreaImgInfo);//Display function 2
 	
-	IT8951DisplayArea(x,y, 8*scale*strlen(string), 16*scale, 1);
+	IT8951DisplayArea(x,y, 8*scale*strlen(string), 16*scale, 1);*/
 }
 
 void IT8951_BMP_Example(uint32_t x, uint32_t y,char *path)
@@ -807,8 +816,8 @@ void IT8951_BMP_Example(uint32_t x, uint32_t y,char *path)
 	stAreaImgInfo.usWidth  = gstI80DevInfo.usPanelW;
 	stAreaImgInfo.usHeight = gstI80DevInfo.usPanelH;
 
-	EPD_DrawLine(275, 200, 400, 316, 0x00);
-	EPD_DrawLine(275, 300, 400, 366, 0x00);
+	EPD_DrawLine(300, 200, 400, 316, 0x00);
+	EPD_DrawLine(325, 300, 400, 366, 0x00);
 	EPD_DrawLine(300, 450, 400, 516, 0x00);
 	EPD_DrawLine(225, 600, 400, 566, 0x00);
 	
