@@ -813,8 +813,8 @@ void IT8951_BMP_Example(uint32_t x, uint32_t y,char *path)
 	//Set Load Area
 	stAreaImgInfo.usX      = 0;
 	stAreaImgInfo.usY      = 0;
-	stAreaImgInfo.usWidth  = gstI80DevInfo.usPanelW;
-	stAreaImgInfo.usHeight = gstI80DevInfo.usPanelH;
+	stAreaImgInfo.usWidth  = gstI80DevInfo.usPanelH;
+	stAreaImgInfo.usHeight = gstI80DevInfo.usPanelW;
 
 	EPD_DrawLine(300, 200, 400, 316, 0x00);
 	EPD_DrawLine(325, 300, 400, 366, 0x00);
