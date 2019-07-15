@@ -807,10 +807,10 @@ void IT8951_BMP_Example(uint32_t x, uint32_t y,char *path)
 	stAreaImgInfo.usWidth  = gstI80DevInfo.usPanelW;
 	stAreaImgInfo.usHeight = gstI80DevInfo.usPanelH;
 
-	EPD_DrawLine(350, 150, 500, 316, 0x00);
+	EPD_DrawLine(425, 150, 500, 316, 0x00);
 	EPD_DrawLine(350, 300, 500, 366, 0x00);
 	EPD_DrawLine(450, 450, 500, 516, 0x00);
-	EPD_DrawLine(300, 550, 500, 566, 0x00);
+	EPD_DrawLine(375, 500, 500, 566, 0x00);
 	
 	//Load Image from Host to IT8951 Image Buffer
 	IT8951HostAreaPackedPixelWrite(&stLdImgInfo, &stAreaImgInfo);//Display function 2
