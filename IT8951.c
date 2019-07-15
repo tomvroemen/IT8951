@@ -757,7 +757,7 @@ void IT8951_GUI_Example()
 	IT8951DisplayArea(0,0, gstI80DevInfo.usPanelW, gstI80DevInfo.usPanelH, 2);
 }
 
-void IT8951_RIPPLE_Info(uint32_t x, uint32_t y,char *string, uint8_t scale)
+void IT8951_RIPPLE_Info_R(uint32_t x, uint32_t y,char *string, uint8_t scale)
 {
 	IT8951LdImgInfo stLdImgInfo;
 	IT8951AreaImgInfo stAreaImgInfo;
@@ -809,7 +809,7 @@ void IT8951_RIPPLE_Info_L(uint32_t x, uint32_t y,char *string, uint8_t scale)
 	IT8951DisplayArea(x+8*scale*strlen(string),y, 8*scale*strlen(string), 16*scale, 1);
 }
 
-void IT8951_BMP_Example_R(uint32_t x, uint32_t y,char *path)
+void IT8951_BMP_Example(uint32_t x, uint32_t y,char *path)
 {
 	IT8951LdImgInfo stLdImgInfo;
 	IT8951AreaImgInfo stAreaImgInfo;
