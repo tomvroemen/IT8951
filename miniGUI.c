@@ -250,11 +250,11 @@ void EPD_PutChar(uint16_t Xpos,uint16_t Ypos,uint8_t ASCI,uint8_t charColor,uint
 				{
 					if(((tmp_char >> (7-j)) & 0x01) == 0x01)
 					{
-						EPD_DrawPixel(Ypos+j*scale+k, Xpos+i*scale+l, charColor);
+						EPD_DrawPixel(Xpos+j*scale+k, Ypos+i*scale+l, charColor);
 					}
 					else
 					{
-						EPD_DrawPixel(Ypos+j*scale+k, Xpos+i*scale+l, bkColor);
+						EPD_DrawPixel(Xpos+j*scale+k, Ypos+i*scale+l, bkColor);
 					}
 				}
 			}
