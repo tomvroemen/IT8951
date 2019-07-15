@@ -31,6 +31,7 @@ int main (int argc, char *argv[])
 	sscanf(argv[2],"%d",&y);
 
 	IT8951_BMP_Example(x,y,argv[3]);
+	EPD_Text(0,  0, (uint8_t*)"hello world",0x00, 0xff);
 	
 	IT8951_Cancel();
 
