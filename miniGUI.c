@@ -236,7 +236,7 @@ void EPD_FillCircle(uint16_t Xpos,uint16_t Ypos,uint16_t Radius,uint8_t color)
 
 void EPD_PutChar(uint16_t Xpos,uint16_t Ypos,uint8_t ASCI,uint8_t charColor,uint8_t bkColor,uint8_t scale )
 {
-	uint16_t i, j;
+	uint16_t i, j, k;
 	uint8_t buffer[16], tmp_char;
 	GetASCIICode(buffer,ASCI);
 	for(i=0; i<16; i++)
@@ -244,13 +244,16 @@ void EPD_PutChar(uint16_t Xpos,uint16_t Ypos,uint8_t ASCI,uint8_t charColor,uint
 		tmp_char = buffer[i];
 		for(j=0; j<8; j++)
 		{
-			if(((tmp_char >> (7-j)) & 0x01) == 0x01)
+			for(k=0; k<scale; k++)
 			{
-				EPD_DrawPixel(Xpos+j*scale, Ypos+i*scale, charColor);
-			}
-			else
-			{
-				EPD_DrawPixel(Xpos+j*scale, Ypos+i*scale, bkColor);
+				if(((tmp_char >> (7-j)) & 0x01) == 0x01)
+				{
+					EPD_DrawPixel(Xpos+j*scale+k, Ypos+i*scale+k, charColor);
+				}
+				else
+				{
+					EPD_DrawPixel(Xpos+j*scale+k, Ypos+i*scale+k, bkColor);
+				}
 			}
 		}
 	}
