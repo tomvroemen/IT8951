@@ -12,7 +12,7 @@ void EPD_Clear(uint8_t Color)
 
 void EPD_DrawPixel(uint16_t x0, uint16_t y0, uint8_t color)
 {
-	if(x0 < 0 || x0 >= gstI80DevInfo.usPanelW || y0 < 0 || y0 >= gstI80DevInfo.usPanelH)
+	if(x0 < 0 || x0 >= gstI80DevInfo.usPanelH || y0 < 0 || y0 >= gstI80DevInfo.usPanelW)
 		return ;	
 	
 	/*
