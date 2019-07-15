@@ -51,14 +51,14 @@ int main (int argc, char *argv[])
 	for(j=0; j<800; j++)
 	{
 		sprintf(buffer, "%d", j*2);
-		IT8951_RIPPLE_Info(600,500,buffer,scale);
+		IT8951_RIPPLE_Info(650,500,buffer,scale);
 		sprintf(buffer, "%d", j);
-		IT8951_RIPPLE_Info(600,550,buffer,scale);
+		IT8951_RIPPLE_Info(650,550,buffer,scale);
 
 		sprintf(buffer, "%d", j*4);
-		IT8951_RIPPLE_Info(600,300,buffer,scale);
+		IT8951_RIPPLE_Info(650,300,buffer,scale);
 		sprintf(buffer, "%d", j*3);
-		IT8951_RIPPLE_Info(600,350,buffer,scale);
+		IT8951_RIPPLE_Info(650,350,buffer,scale);
 	}
 
 	IT8951_Cancel();
