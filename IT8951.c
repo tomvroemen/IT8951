@@ -759,6 +759,9 @@ void IT8951_GUI_Example()
 
 void IT8951_RIPPLE_Info(uint32_t x, uint32_t y,char *string)
 {
+	IT8951LdImgInfo stLdImgInfo;
+	IT8951AreaImgInfo stAreaImgInfo;
+
 	EPD_Text(0,  0, (uint8_t*)string,0x00, 0xff);
 
 	IT8951WaitForDisplayReady();
