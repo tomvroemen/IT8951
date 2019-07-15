@@ -33,7 +33,7 @@ int main (int argc, char *argv[])
 
 	IT8951_BMP_Example(x,y,argv[3]);
 
-	uint8_t scale = 1;
+	uint8_t scale = 2;
 
 	IT8951_RIPPLE_Info(10,10,"Ripple Test",scale);
 	IT8951_RIPPLE_Info(10,60,"Hoi Koen",scale);
