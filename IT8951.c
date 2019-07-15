@@ -783,8 +783,8 @@ void IT8951_RIPPLE_Info(uint32_t x, uint32_t y,char *string, uint8_t scale)
 	
 	IT8951DisplayArea(x,y, 8*scale*strlen(string), 16*scale, 1);
 	*/
-	stAreaImgInfo.usX      = x;
-	stAreaImgInfo.usY      = y;
+	stAreaImgInfo.usX      = 0;
+	stAreaImgInfo.usY      = 0;
 	stAreaImgInfo.usWidth  = gstI80DevInfo.usPanelW;
 	stAreaImgInfo.usHeight = gstI80DevInfo.usPanelH;
 	
