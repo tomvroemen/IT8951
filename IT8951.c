@@ -833,10 +833,10 @@ void IT8951_BMP_Example(uint32_t x, uint32_t y,char *path)
 	stAreaImgInfo.usWidth  = gstI80DevInfo.usPanelW;
 	stAreaImgInfo.usHeight = gstI80DevInfo.usPanelH;
 
-	EPD_DrawLine(375, 200, 300, 20, 0x00);
-	EPD_DrawLine(360, 275, 300, 60, 0x00);
-	EPD_DrawLine(400, 350, 300, 100, 0x00);
-	EPD_DrawLine(350, 450, 300, 240, 0x00);
+	EPD_DrawLine(375, 125, 300, 36, 0x00);
+	EPD_DrawLine(360, 175, 300, 76, 0x00);
+	EPD_DrawLine(400, 350, 300, 116, 0x00);
+	EPD_DrawLine(350, 450, 300, 256, 0x00);
 
 	EPD_DrawLine(425, 150, 500, 316, 0x00);
 	EPD_DrawLine(350, 300, 500, 366, 0x00);
