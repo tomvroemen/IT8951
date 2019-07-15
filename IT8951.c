@@ -772,10 +772,10 @@ void IT8951_RIPPLE_Info(uint32_t x, uint32_t y,char *string, uint8_t scale)
 	stLdImgInfo.usRotate         = IT8951_ROTATE_0;
 	stLdImgInfo.ulImgBufBaseAddr = gulImgBufAddr;
 	//Set Load Area
-	stAreaImgInfo.usX      = 0;
-	stAreaImgInfo.usY      = 0;
+	stAreaImgInfo.usX      = x;
+	stAreaImgInfo.usY      = y;
 	stAreaImgInfo.usWidth  = gstI80DevInfo.usPanelW;
-	stAreaImgInfo.usHeight = gstI80DevInfo.usPanelH;
+	stAreaImgInfo.usHeight = 16*scale;
 	
 	//Load Image from Host to IT8951 Image Buffer
 	IT8951HostAreaPackedPixelWrite(&stLdImgInfo, &stAreaImgInfo);//Display function 2
