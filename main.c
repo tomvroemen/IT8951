@@ -43,8 +43,8 @@ int main (int argc, char *argv[])
 	IT8951_RIPPLE_Info(10,500*scale,"Motor",scale);
 	IT8951_RIPPLE_Info(10,550*scale,"Battery",scale);
 
-	IT8951_RIPPLE_Info(400,500*scale,"Voltage",scale);
-	IT8951_RIPPLE_Info(400,550*scale,"Current",scale);
+	IT8951_RIPPLE_Info(600,500*scale,"Voltage",scale);
+	IT8951_RIPPLE_Info(600,550*scale,"Current",scale);
 
 	IT8951_Cancel();
 
