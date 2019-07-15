@@ -603,7 +603,7 @@ void IT8951DisplayExample()
  	stLdImgInfo.ulStartFBAddr    = (uint32_t)gpFrameBuf;
  	stLdImgInfo.usEndianType     = IT8951_LDIMG_L_ENDIAN;
  	stLdImgInfo.usPixelFormat    = IT8951_8BPP;
- 	stLdImgInfo.usRotate         = IT8951_ROTATE_90;
+ 	stLdImgInfo.usRotate         = IT8951_ROTATE_0;
  	stLdImgInfo.ulImgBufBaseAddr = gulImgBufAddr;
  	//Set Load Area
  	stAreaImgInfo.usX      = 0;
@@ -629,7 +629,7 @@ void IT8951DisplayExample()
  	stLdImgInfo.ulStartFBAddr    = (uint32_t)gpFrameBuf;
  	stLdImgInfo.usEndianType     = IT8951_LDIMG_L_ENDIAN;
  	stLdImgInfo.usPixelFormat    = IT8951_8BPP; 
- 	stLdImgInfo.usRotate         = IT8951_ROTATE_90;
+ 	stLdImgInfo.usRotate         = IT8951_ROTATE_0;
  	stLdImgInfo.ulImgBufBaseAddr = gulImgBufAddr;
  	//Set Load Area
  	stAreaImgInfo.usX      = 0;
@@ -677,7 +677,7 @@ void IT8951DisplayExample2()
 	stLdImgInfo.ulStartFBAddr    = (uint32_t)gpFrameBuf;
 	stLdImgInfo.usEndianType     = IT8951_LDIMG_L_ENDIAN;
 	stLdImgInfo.usPixelFormat    = IT8951_8BPP; 
-	stLdImgInfo.usRotate         = IT8951_ROTATE_90;
+	stLdImgInfo.usRotate         = IT8951_ROTATE_0;
 	stLdImgInfo.ulImgBufBaseAddr = gulImgBufAddr;
 	//Set Load Area
 	stAreaImgInfo.usX      = 0;
@@ -743,7 +743,7 @@ void IT8951_GUI_Example()
 	stLdImgInfo.ulStartFBAddr    = (uint32_t)gpFrameBuf;
 	stLdImgInfo.usEndianType     = IT8951_LDIMG_L_ENDIAN;
 	stLdImgInfo.usPixelFormat    = IT8951_8BPP; 
-	stLdImgInfo.usRotate         = IT8951_ROTATE_90;
+	stLdImgInfo.usRotate         = IT8951_ROTATE_0;
 	stLdImgInfo.ulImgBufBaseAddr = gulImgBufAddr;
 	//Set Load Area
 	stAreaImgInfo.usX      = 0;
@@ -769,7 +769,7 @@ void IT8951_RIPPLE_Info(uint32_t x, uint32_t y,char *string, uint8_t scale)
 	stLdImgInfo.ulStartFBAddr    = (uint32_t)gpFrameBuf;
 	stLdImgInfo.usEndianType     = IT8951_LDIMG_L_ENDIAN;
 	stLdImgInfo.usPixelFormat    = IT8951_8BPP; 
-	stLdImgInfo.usRotate         = IT8951_ROTATE_90;
+	stLdImgInfo.usRotate         = IT8951_ROTATE_0;
 	stLdImgInfo.ulImgBufBaseAddr = gulImgBufAddr;
 	//Set Load Area
 	stAreaImgInfo.usX      = x;
@@ -799,7 +799,7 @@ void IT8951_BMP_Example(uint32_t x, uint32_t y,char *path)
 	stLdImgInfo.ulStartFBAddr    = (uint32_t)gpFrameBuf;
 	stLdImgInfo.usEndianType     = IT8951_LDIMG_L_ENDIAN;
 	stLdImgInfo.usPixelFormat    = IT8951_8BPP; 
-	stLdImgInfo.usRotate         = IT8951_ROTATE_90;
+	stLdImgInfo.usRotate         = IT8951_ROTATE_0;
 	stLdImgInfo.ulImgBufBaseAddr = gulImgBufAddr;
 	//Set Load Area
 	stAreaImgInfo.usX      = 0;
@@ -831,7 +831,7 @@ void IT8951Load1bppImage(uint8_t* p1bppImgBuf, uint16_t usX, uint16_t usY, uint1
     stLdImgInfo.ulStartFBAddr    = (uint32_t) p1bppImgBuf;
     stLdImgInfo.usEndianType     = IT8951_LDIMG_L_ENDIAN;
     stLdImgInfo.usPixelFormat    = IT8951_8BPP; //we use 8bpp because IT8951 dose not support 1bpp mode for load image?Aso we use Load 8bpp mode ,but the transfer size needs to be reduced to Size/8
-    stLdImgInfo.usRotate         = IT8951_ROTATE_90;
+    stLdImgInfo.usRotate         = IT8951_ROTATE_0;
     stLdImgInfo.ulImgBufBaseAddr = gulImgBufAddr;
     //Set Load Area
     stAreaImgInfo.usX      = usX/8;
