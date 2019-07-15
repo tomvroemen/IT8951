@@ -775,13 +775,13 @@ void IT8951_RIPPLE_Info(uint32_t x, uint32_t y,char *string, uint8_t scale)
 	stAreaImgInfo.usX      = x;
 	stAreaImgInfo.usY      = y;
 
-	stAreaImgInfo.usWidth  = gstI80DevInfo.usPanelW;
-	stAreaImgInfo.usHeight = gstI80DevInfo.usPanelH;
+	stAreaImgInfo.usWidth  = gstI80DevInfo.usPanelH;
+	stAreaImgInfo.usHeight = gstI80DevInfo.usPanelW;
 	
 	//Load Image from Host to IT8951 Image Buffer
 	IT8951HostAreaPackedPixelWrite(&stLdImgInfo, &stAreaImgInfo);//Display function 2
 	
-	IT8951DisplayArea(0,0, gstI80DevInfo.usPanelW, gstI80DevInfo.usPanelH, 2);
+	IT8951DisplayArea(0,0, gstI80DevInfo.usPanelH, gstI80DevInfo.usPanelW, 2);
 
 	/*stAreaImgInfo.usWidth  = gstI80DevInfo.usPanelW;
 	stAreaImgInfo.usHeight = 16*scale;
