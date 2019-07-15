@@ -781,7 +781,7 @@ void IT8951_RIPPLE_Info(uint32_t x, uint32_t y,char *string)
 	//Load Image from Host to IT8951 Image Buffer
 	IT8951HostAreaPackedPixelWrite(&stLdImgInfo, &stAreaImgInfo);//Display function 2
 	
-	IT8951DisplayArea(0,0, 200, 16, 2);
+	IT8951DisplayArea(x,y, 200, 16, 2);
 }
 
 void IT8951_BMP_Example(uint32_t x, uint32_t y,char *path)
