@@ -776,7 +776,7 @@ void IT8951_RIPPLE_Info(uint32_t x, uint32_t y,char *string, uint8_t scale)
 	//Set Load Area
 	stAreaImgInfo.usX      = x;
 	stAreaImgInfo.usY      = y;
-	stAreaImgInfo.usWidth  = gstI80DevInfo.usPanelW;
+	stAreaImgInfo.usWidth  = 8*scale*strlen(string);
 	stAreaImgInfo.usHeight = 16*scale;
 	
 	 //Load Image from Host to IT8951 Image Buffer
@@ -847,7 +847,7 @@ void IT8951Load1bppImage(uint8_t* p1bppImgBuf, uint16_t usX, uint16_t usY, uint1
     stAreaImgInfo.usY      = usY;
     stAreaImgInfo.usWidth  = usW/8;//1bpp, Chaning Transfer size setting to 1/8X of 8bpp mode 
     stAreaImgInfo.usHeight = usH;
-    printf("IT8951HostAreaPackedPixelWrite [wait]\n\r");
+    //printf("IT8951HostAreaPackedPixelWrite [wait]\n\r");
     //Load Image from Host to IT8951 Image Buffer
     IT8951HostAreaPackedPixelWrite(&stLdImgInfo, &stAreaImgInfo);//Display function 2
 }
