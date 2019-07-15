@@ -35,13 +35,13 @@ int main (int argc, char *argv[])
 
 	uint8_t scale = 2;
 
-	IT8951_RIPPLE_Info(10,10,"Ripple Test",scale);
-	IT8951_RIPPLE_Info(10,60,"Hoi Koen",scale);
-	IT8951_RIPPLE_Info(10,100,"en",scale);
-	IT8951_RIPPLE_Info(10,140,"Rogier!",scale);
+	IT8951_RIPPLE_Info_L(10,10,"Ripple Test",scale);
+	IT8951_RIPPLE_Info_L(10,60,"Hoi Koen",scale);
+	IT8951_RIPPLE_Info_L(10,100,"en",scale);
+	IT8951_RIPPLE_Info_L(10,140,"Rogier!",scale);
 
 	IT8951_RIPPLE_Info(500,300,"Speed",scale);
-	IT8951_RIPPLE_Info(500,350,"Temperature",scale);
+	IT8951_RIPPLE_Info(500,350,"Temp.",scale);
 
 	IT8951_RIPPLE_Info(500,500,"Voltage",scale);
 	IT8951_RIPPLE_Info(500,550,"Current",scale);
