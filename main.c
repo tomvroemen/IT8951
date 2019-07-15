@@ -40,11 +40,11 @@ int main (int argc, char *argv[])
 	IT8951_RIPPLE_Info(10,100,"en",scale);
 	IT8951_RIPPLE_Info(10,140,"Rogier!",scale);
 
-	IT8951_RIPPLE_Info(10,500,"Motor",scale);
-	IT8951_RIPPLE_Info(10,550,"Battery",scale);
+	IT8951_RIPPLE_Info(500,300,"Motor",scale);
+	IT8951_RIPPLE_Info(500,350,"Battery",scale);
 
-	IT8951_RIPPLE_Info(600,500,"Voltage",scale);
-	IT8951_RIPPLE_Info(600,550,"Current",scale);
+	IT8951_RIPPLE_Info(500,500,"Voltage",scale);
+	IT8951_RIPPLE_Info(500,550,"Current",scale);
 
 	IT8951_Cancel();
 
