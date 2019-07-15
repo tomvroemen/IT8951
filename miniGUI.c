@@ -236,7 +236,7 @@ void EPD_FillCircle(uint16_t Xpos,uint16_t Ypos,uint16_t Radius,uint8_t color)
 
 void EPD_PutChar(uint16_t Xpos,uint16_t Ypos,uint8_t ASCI,uint8_t charColor,uint8_t bkColor,uint8_t scale )
 {
-	uint16_t i, j, k;
+	uint16_t i, j, k, l;
 	uint8_t buffer[16], tmp_char;
 	GetASCIICode(buffer,ASCI);
 	for(i=0; i<16; i++)
