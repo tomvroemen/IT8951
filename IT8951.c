@@ -761,8 +761,9 @@ void IT8951_RIPPLE_Info(uint32_t x, uint32_t y,char *string, uint8_t scale)
 {
 	IT8951LdImgInfo stLdImgInfo;
 	IT8951AreaImgInfo stAreaImgInfo;
-	char ln = string.length()
-	EPD_Text(0,  0, (uint8_t*)"                                        ".resize(ln);,0x00, 0xff, scale);
+	char* texstr;
+	texstr = malloc(strlen(string)+1); 
+	EPD_Text(0,  0, (uint8_t*)texstr,0x00, 0xff, scale);
 	EPD_Text(0,  0, (uint8_t*)string,0x00, 0xff, scale);
 
 	IT8951WaitForDisplayReady();
