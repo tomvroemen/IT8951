@@ -776,7 +776,7 @@ void IT8951_RIPPLE_Info(uint32_t x, uint32_t y,char *string)
 	stAreaImgInfo.usX      = x;
 	stAreaImgInfo.usY      = y;
 	stAreaImgInfo.usWidth  = 200;
-	stAreaImgInfo.usHeight = 200;
+	stAreaImgInfo.usHeight = 16;
 	
 	//Load Image from Host to IT8951 Image Buffer
 	IT8951HostAreaPackedPixelWrite(&stLdImgInfo, &stAreaImgInfo);//Display function 2
