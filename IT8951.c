@@ -763,33 +763,24 @@ void IT8951_RIPPLE_Info(uint32_t x, uint32_t y,char *string, uint8_t scale)
 	IT8951AreaImgInfo stAreaImgInfo;
 	EPD_Text(0,  0, (uint8_t*)string,0x00, 0xff, scale);
 
-	memset(gpFrameBuf, 0x00, (8*scale*strlen(string) * 16*scale)/8);//Host Frame Buffer(Source)
-
 	IT8951WaitForDisplayReady();
 	
 	//Setting Load image information
-	/*stLdImgInfo.ulStartFBAddr    = (uint32_t)gpFrameBuf;
+	stLdImgInfo.ulStartFBAddr    = (uint32_t)gpFrameBuf;
 	stLdImgInfo.usEndianType     = IT8951_LDIMG_L_ENDIAN;
 	stLdImgInfo.usPixelFormat    = IT8951_8BPP; 
 	stLdImgInfo.usRotate         = IT8951_ROTATE_0;
-	stLdImgInfo.ulImgBufBaseAddr = gulImgBufAddr;*/
+	stLdImgInfo.ulImgBufBaseAddr = gulImgBufAddr;
 	//Set Load Area
 	stAreaImgInfo.usX      = x;
 	stAreaImgInfo.usY      = y;
 	stAreaImgInfo.usWidth  = gstI80DevInfo.usPanelW;
 	stAreaImgInfo.usHeight = 16*scale;
 	
-	 //Load Image from Host to IT8951 Image Buffer
-     IT8951Load1bppImage(gpFrameBuf, stAreaImgInfo.usX, stAreaImgInfo.usY, stAreaImgInfo.usWidth, stAreaImgInfo.usHeight);//Display function 4, Arg
-     
-     //Display Area - (x,y,w,h) with mode 2 for Gray Scale
-     //e.g. if we want to set b0(Background color) for Black-0x00 , Set b1(Foreground) for White-0xFF
-     IT8951DisplayArea1bpp(x,y, 8*scale*strlen(string), 16*scale, 0, 0x00, 0xFF);
-
 	//Load Image from Host to IT8951 Image Buffer
-	//IT8951HostAreaPackedPixelWrite(&stLdImgInfo, &stAreaImgInfo);//Display function 2
+	IT8951HostAreaPackedPixelWrite(&stLdImgInfo, &stAreaImgInfo);//Display function 2
 	
-	//IT8951DisplayArea(x,y, 8*scale*strlen(string), 16*scale, 2);
+	IT8951DisplayArea(x,y, 8*scale*strlen(string), 16*scale, 2);
 }
 
 void IT8951_BMP_Example(uint32_t x, uint32_t y,char *path)
