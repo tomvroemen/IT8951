@@ -27,7 +27,7 @@ int main (int argc, char *argv[])
 	}
 	*/
 
-	uint32_t x,y;
+	//uint32_t x,y;
 	//sscanf(argv[1],"%d",&x);
 	//sscanf(argv[2],"%d",&y);
 
