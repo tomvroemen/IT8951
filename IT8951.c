@@ -547,6 +547,9 @@ uint8_t IT8951_Init()
 	bcm2835_delay(100);
 	bcm2835_gpio_write(RESET, HIGH);
 
+	printf("resetted\n");
+	bcm2835_delay(100);
+
 	//Get Device Info
 	GetIT8951SystemInfo(&gstI80DevInfo);
 	
@@ -567,6 +570,8 @@ uint8_t IT8951_Init()
 		IT8951SetVCOM(VCOM);
 		printf("VCOM = -%.02fV\n",(float)IT8951GetVCOM()/1000);
 	}
+
+	printf("init complete\n");
 	
 	return 0;
 }
