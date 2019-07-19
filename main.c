@@ -46,6 +46,8 @@ int main (int argc, char *argv[])
 	IT8951_RIPPLE_Info_R(500,500,"Voltage",scale);
 	IT8951_RIPPLE_Info_R(500,550,"Current",scale);
 
+	printf("running\n");
+
 	uint16_t j;
 	char buffer [8];
 	for(j=0; j<800; j++)
