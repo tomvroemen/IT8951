@@ -8,7 +8,7 @@
 #include <string.h>
 #include "miniGUI.h"
 
-#define CS 				8
+#define CS 				7 // was 8
 #define HRDY 	        24
 #define RESET 	        17
 #define VCOM			2060 //e.g. -1.53 = 1530 = 0x5FA
