@@ -10,7 +10,7 @@
 
 #define CS 				7 // was 8
 #define HRDY 	        24
-#define RESET 	        17
+#define RESET 	        27 // was 17
 #define VCOM			2060 //e.g. -1.53 = 1530 = 0x5FA
 
 //prototype of structure
