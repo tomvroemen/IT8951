@@ -19,19 +19,19 @@ int main (int argc, char *argv[])
 	IT8951DisplayExample2();
 	printf("IT8951_GUI_Example\n");
 	IT8951_GUI_Example();
-	*/
 	
 	if (argc != 4)
 	{
 		printf("Error: argc!=4.\n");
 		exit(1);
 	}
+	*/
 
 	uint32_t x,y;
 	sscanf(argv[1],"%d",&x);
 	sscanf(argv[2],"%d",&y);
 
-	IT8951_BMP_Example(x,y,argv[3]);
+	IT8951_BMP_Example(0,0,"ripple_IV.bmp");
 
 	uint8_t scale = 2;
 
