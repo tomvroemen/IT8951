@@ -28,8 +28,8 @@ int main (int argc, char *argv[])
 	*/
 
 	uint32_t x,y;
-	sscanf(argv[1],"%d",&x);
-	sscanf(argv[2],"%d",&y);
+	//sscanf(argv[1],"%d",&x);
+	//sscanf(argv[2],"%d",&y);
 
 	IT8951_BMP_Example(0,0,"ripple_IV.bmp");
 
