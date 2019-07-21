@@ -552,6 +552,7 @@ uint8_t IT8951_Init()
 
 	//Get Device Info
 	GetIT8951SystemInfo(&gstI80DevInfo);
+	return 0;
 	
 	gpFrameBuf = malloc(gstI80DevInfo.usPanelW * gstI80DevInfo.usPanelH);
 	if (!gpFrameBuf)
