@@ -38,7 +38,7 @@ void LCDWriteCmdCode(uint16_t usCmdCode)
 	bcm2835_spi_transfer(usCmdCode);
 	
 	bcm2835_gpio_write(CS,HIGH); 
-	printf("CMD %#02x %#02x \r\n",wPreamble, usCmdCode);
+	printf("CMD 0x%04x 0x%04x \r\n",wPreamble, usCmdCode);
 }
 
 //-----------------------------------------------------------
