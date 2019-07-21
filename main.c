@@ -34,6 +34,7 @@ int main (int argc, char *argv[])
 	//sscanf(argv[2],"%d",&y);
 
 	IT8951_BMP_Example(0,0,"ripple_IV.bmp");
+	return 0;
 
 	uint8_t scale = 2;
 
