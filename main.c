@@ -14,7 +14,7 @@ int main (int argc, char *argv[])
 		return 1;
 	}
 	printf("inited\n");
-	return 0;
+	//return 0;
 	
 	/*
 	IT8951DisplayExample();
